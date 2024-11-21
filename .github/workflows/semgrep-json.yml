@@ -12,7 +12,7 @@ on:
       - main
       - master
     paths:
-      - .github/workflows/semgrep.yml
+      - .github/workflows/semgrep-json.yml
   # Schedule the CI job (this method uses cron syntax):
   # schedule:
     # - cron: '20 17 * * *' # Sets Semgrep to scan every day at 17:20 UTC.
@@ -38,7 +38,7 @@ jobs:
           SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
 
       # Upload the SARIF file as an artifact
-      - name: Upload SARIF artifact
+      - name: Upload json artifact
         uses: actions/upload-artifact@v3
         with:
           name: semgrep-json

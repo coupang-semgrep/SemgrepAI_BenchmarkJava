@@ -12,7 +12,7 @@ on:
       - main
       - master
     paths:
-      - .github/workflows/semgrep.yml
+      - .github/workflows/semgrep-sarif.yml
   # Schedule the CI job (this method uses cron syntax):
   # schedule:
     # - cron: '20 17 * * *' # Sets Semgrep to scan every day at 17:20 UTC.
