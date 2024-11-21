@@ -9,7 +9,7 @@
 <meta name="author" content="">
 <link rel="icon" href="../../favicon.ico">
 
-<title>OWASP Benchmark Scorecard for OWASP ZAP vD-2015-08-24 (DAST)</title>
+<title>OWASP Benchmark Scorecard for XSS (Cross-Site Scripting)</title>
 
 <!-- Bootstrap core CSS -->
 <link href="content/css/bootstrap.min.css" rel="stylesheet">
@@ -73,66 +73,25 @@
             <div>empty</div>
             <div>empty</div>
 
-            <h3>OWASP Benchmark Scorecard for OWASP ZAP vD-2015-08-24 (DAST)</h3>
+            <h3>OWASP Benchmark Scorecard for XSS (Cross-Site Scripting)</h3>
 
-            <p>OWASP Benchmark is a test suite designed to evaluate the speed, coverage, and accuracy of automated vulnerability detection tools. Without the ability to measure these tools, it is difficult to understand their strengths and weaknesses, and compare them to each other. OWASP Benchmark contains thousands of test cases that are fully runnable and exploitable. The following is the scorecard for the tool OWASP ZAP against version 1.2 of OWASP Benchmark. It shows how well this tool finds true positives and avoids false positives in the OWASP Benchmark test cases.</p>
+            <p>OWASP Benchmark is a test suite designed to evaluate the speed, coverage, and accuracy of automated vulnerability detection tools. Without the ability to measure these tools, it is difficult to understand their strengths and weaknesses, and compare them to each other. OWASP Benchmark contains thousands of test cases that are fully runnable and exploitable. The following is the scorecard showing how well all the tools perform against XSS (Cross-Site Scripting) (CWE #79) in version 1.2 of OWASP Benchmark. It shows how well each tool finds true positives and avoids false positives for that type of vulnerability in the OWASP Benchmark test cases.</p>
                         <p>
                 For more information, please visit the <a href="https://owasp.org/www-project-benchmark/">OWASP Benchmark Project Site</a>.
             </p>
- <img align="middle" src="Benchmark_v1.2_Scorecard_for_OWASP_ZAP_vD-2015-08-24.png" alt="" />
+ <img src='Benchmark_v1.2_Scorecard_for_XSS_(Cross-Site_Scripting).png' alt="" />
             <p>
-                <b>Legend:</b> Each line of the scorecard in the upper right has a category, followed by this tool's overall score in that category. After each % is this tool's TPR - FPR used to calculate this score. See the table below for more precise scoring details.
+                <b>Legend:</b> Each line of the scorecard in the upper right has the name/version of a specific tool, followed by the % score for that tool in this category. After each % is the TPR - FPR for that tool in this category used to calculate this score. See the table below for more precise scoring details.
             </p>
-            <h2>Statistics</h2>
-            <table class="table">
-                <tr>
-                    <th>Tool elapsed analysis time</th>
-                    <td>5:00:00</td>
-                </tr>
-                <tr>
-                    <th>Tool overall score (0-100)</th>
-                    <td>17.99%</td>
-                </tr>
-                <tr>
-                    <th>Total test cases</th>
-                    <td>2740</td>
-                </tr>
-                <tr>
-                    <th>Download raw results</th>
-                    <td><a href="Benchmark_v1.2_Scorecard_for_OWASP_ZAP_vD-2015-08-24.csv">Actual Results</a></td>
-                </tr>
-            </table>
+
+            <h2>Detailed Results Per Tool for XSS (Cross-Site Scripting) (CWE #79)</h2>
+            <table class="table"><tr><th>Tool</th><th>Type</th><th>TP</th><th>FN</th><th>TN</th><th>FP</th><th>Total</th><th>TPR</th><th>FPR</th><th>Score</th></tr><tr class="danger"><td>FBwFindSecBugs v1.4.0</td><td>SAST</td><td>3</td><td>243</td><td>209</td><td>0</td><td>455</td><td>1.22%</td><td>0.00%</td><td>1.22%</td></tr><tr class="danger"><td>FBwFindSecBugs v1.4.3</td><td>SAST</td><td>1</td><td>245</td><td>209</td><td>0</td><td>455</td><td>0.41%</td><td>0.00%</td><td>0.41%</td></tr><tr class="danger"><td>FBwFindSecBugs v1.4.4</td><td>SAST</td><td>3</td><td>243</td><td>209</td><td>0</td><td>455</td><td>1.22%</td><td>0.00%</td><td>1.22%</td></tr><tr><td>FBwFindSecBugs v1.4.5</td><td>SAST</td><td>246</td><td>0</td><td>78</td><td>131</td><td>455</td><td>100.00%</td><td>62.68%</td><td>37.32%</td></tr><tr><td>FBwFindSecBugs v1.4.6</td><td>SAST</td><td>246</td><td>0</td><td>78</td><td>131</td><td>455</td><td>100.00%</td><td>62.68%</td><td>37.32%</td></tr><tr class="danger"><td>FindBugs v3.0.1</td><td>SAST</td><td>1</td><td>245</td><td>209</td><td>0</td><td>455</td><td>0.41%</td><td>0.00%</td><td>0.41%</td></tr><tr><td>OWASP ZAP vD-2015-08-24</td><td>DAST</td><td>71</td><td>175</td><td>209</td><td>0</td><td>455</td><td>28.86%</td><td>0.00%</td><td>28.86%</td></tr><tr><td>OWASP ZAP vD-2016-09-05</td><td>DAST</td><td>71</td><td>175</td><td>209</td><td>0</td><td>455</td><td>28.86%</td><td>0.00%</td><td>28.86%</td></tr><tr class="danger"><td>PMD v5.2.3</td><td>SAST</td><td>0</td><td>246</td><td>209</td><td>0</td><td>455</td><td>0.00%</td><td>0.00%</td><td>0.00%</td></tr><tr><td>Semgrep PRO v1.96.0</td><td>SAST</td><td>195</td><td>51</td><td>120</td><td>89</td><td>455</td><td>79.27%</td><td>42.58%</td><td>36.68%</td></tr><tr class="danger"><td>SonarQube Java Plugin v3.14</td><td>SAST</td><td>0</td><td>246</td><td>209</td><td>0</td><td>455</td><td>0.00%</td><td>0.00%</td><td>0.00%</td></tr><tr class="danger"><td>VisualCodeGrepper v2.2.0</td><td>SAST</td><td>0</td><td>246</td><td>209</td><td>0</td><td>455</td><td>0.00%</td><td>0.00%</td><td>0.00%</td></tr></table>
 
             <p />
             <p />
-
-            <h2>Detailed Results</h2>
-            <table class="table">
-<tr><th>Category</th><th>CWE #</th><th>TP</th><th>FN</th><th>TN</th><th>FP</th><th>Total</th><th>TPR</th><th>FPR</th><th>Score</th></tr>
-<tr ><td>Command Injection</td><td>78</td><td>44</td><td>82</td><td>125</td><td>0</td><td>251</td><td>34.92%</td><td>0.00%</td><td>34.92%</td></tr>
-<tr class="success"><td>Insecure Cookie</td><td>614</td><td>36</td><td>0</td><td>31</td><td>0</td><td>67</td><td>100.00%</td><td>0.00%</td><td>100.00%</td></tr>
-<tr class="danger"><td>LDAP Injection</td><td>90</td><td>0</td><td>27</td><td>32</td><td>0</td><td>59</td><td>0.00%</td><td>0.00%</td><td>0.00%</td></tr>
-<tr class="danger"><td>Path Traversal</td><td>22</td><td>0</td><td>133</td><td>135</td><td>0</td><td>268</td><td>0.00%</td><td>0.00%</td><td>0.00%</td></tr>
-<tr ><td>SQL Injection</td><td>89</td><td>94</td><td>178</td><td>231</td><td>1</td><td>504</td><td>34.56%</td><td>0.43%</td><td>34.13%</td></tr>
-<tr class="danger"><td>Trust Boundary</td><td>501</td><td>0</td><td>83</td><td>43</td><td>0</td><td>126</td><td>0.00%</td><td>0.00%</td><td>0.00%</td></tr>
-<tr class="danger"><td>Weak Encryption Algorithm</td><td>327</td><td>0</td><td>130</td><td>116</td><td>0</td><td>246</td><td>0.00%</td><td>0.00%</td><td>0.00%</td></tr>
-<tr class="danger"><td>Weak Hashing Algorithm</td><td>328</td><td>0</td><td>129</td><td>107</td><td>0</td><td>236</td><td>0.00%</td><td>0.00%</td><td>0.00%</td></tr>
-<tr class="danger"><td>Weak Randomness</td><td>330</td><td>0</td><td>218</td><td>275</td><td>0</td><td>493</td><td>0.00%</td><td>0.00%</td><td>0.00%</td></tr>
-<tr class="danger"><td>XPath Injection</td><td>643</td><td>0</td><td>15</td><td>20</td><td>0</td><td>35</td><td>0.00%</td><td>0.00%</td><td>0.00%</td></tr>
-<tr ><td>XSS (Cross-Site Scripting)</td><td>79</td><td>71</td><td>175</td><td>209</td><td>0</td><td>455</td><td>28.86%</td><td>0.00%</td><td>28.86%</td></tr>
-<tr><th>Totals</th><th/><th>245</th><th>1170</th><th>1324</th><th>1</th><th>2740</th><th/><th/><th/></tr>
-<tr><th>Overall Results*</th><th/><th/><th/><th/><th/><th/><th>18.03%</th><th>0.04%</th><th>17.99%</th></tr>
-</table><p>*-The Overall Results are averages across all the vulnerability categories.  You can't compute these averages by simply calculating the TPR and FPR rates using the values in the Totals row. If you did that, categories with larger number of tests would carry  more weight than categories with less tests. The proper calculation of the Overall Results is to add up the values of each of these per row,  then divide by the number of rows, which is how they are calculated.<p/>
-            <p />
-
 
             <h2>Key</h2>
             <table class="table">
-                <tr>
-                    <th>Common Weakness Enumeration (CWE)</th>
-                    <td>The primary MITRE CWE number for this vulnerability category.</td>
-                </tr>
-
                 <tr>
                     <th>True Positive (TP)</th>
                     <td>Tests with real vulnerabilities that were correctly reported as vulnerable by the tool.</td>
@@ -170,7 +129,6 @@
                 </tr>
 
             </table>
-            
 
         </div>
 
